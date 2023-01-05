@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
+<html lang="en-IN">
+    <head>
+        <meta charset="utf-8">
+        <title>Result Page</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="preReadsCss.css">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div class="hero">
+            <div class="overlay"></div>
+            <div class="content">
+              <img id="profileImage" alt="Profile Picture">
+              <h1 >Title:
+                <div class ="Title" id="FirstName"></div>
+                <div class ="Title" id="SecondName"></div>
+              </h1>
+              <h1>Description:</h1>
+              <p id="Country"></p>
+              <p id="Gender"></p>
+              <h2>About:</h2>
+              <p id="SelfDescription"></p>
+            </div>
+          </div>
+        <script>
+            document.getElementById('profileImage').src = sessionStorage.profileImage;
+            document.querySelector('.hero').style.backgroundImage = `linear-gradient(to bottom right,rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 0.8)),url(${sessionStorage.profileImage})`;
+            document.getElementById('FirstName').innerText= sessionStorage.FirstName;
+            document.getElementById('SecondName').innerText= sessionStorage.SecondName;
+            document.getElementById('Gender').innerText= "Gender: "+sessionStorage.Gender;
+            document.getElementById('Country').innerText= "Country: "+ sessionStorage.Country;
+            document.getElementById('SelfDescription').innerText= "About: "+ sessionStorage.SelfDescription;
+        </script>
+    </body>
+</html>
