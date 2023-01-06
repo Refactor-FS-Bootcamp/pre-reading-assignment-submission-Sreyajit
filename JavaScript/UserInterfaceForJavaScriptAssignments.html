@@ -15,9 +15,18 @@
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        Click below to enter two dates and know their difference
-        <button onclick="Assignment3_2()">Click me</button>
+        <button onclick="windowInfo()">Click me</button>
         <script >
+            function ReverseString(str) {
+                if (str.length === 0) {
+                    return str;
+                }
+                return ReverseString(str.slice(1))+ str[0];
+            }
+            function AssignmentProject3_3() {
+                str = prompt('Enter a String')
+                return window.confirm(`The reverse of ${str} is ${Assignment3_3(str)}`);
+            }
         </script>
     </body>
 </html>
